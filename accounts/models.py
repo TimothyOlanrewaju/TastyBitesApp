@@ -51,7 +51,7 @@ class User(AbstractUser):
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     othername = models.CharField(max_length=100 ,blank=True,null=True)
-    username = models.CharField(max_length=100, unique=True)  # Ensure username is unique
+    username = models.CharField(max_length=100, unique=True) 
     file_no = models.CharField(unique=True, max_length=7)
     phone_number = models.CharField(max_length=11)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True)
